@@ -1,0 +1,16 @@
+        Dim mID As Integer
+        Dim mName As String
+
+        FileOpen(1, "D:\mRec.txt", OpenMode.Input)
+
+        While Not EOF(1)
+
+            Input(1, mID)
+            Input(1, mName)
+
+            Console.WriteLine("Member ID. :" & mID)
+            Console.WriteLine("Member name :" & mName)
+
+        End While
+
+        FileClose(1)
