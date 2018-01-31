@@ -1,4 +1,4 @@
-Dim mID As Integer
+        Dim mID As Integer
         Dim mName As String
 
         Console.Write("Enter member ID: ")
