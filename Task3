@@ -1,0 +1,20 @@
+        Dim mID As Integer
+        Dim mName, searchName As String
+
+        Console.Write("Enter name to search for :")
+        searchName = Console.ReadLine
+
+        FileOpen(1, "d:\mRec.txt", OpenMode.Input)
+        While Not EOF(1) And isFound = False
+            Input(1, mID)
+            Input(1, mName)
+
+            If String.Compare(mName, searchName, True) = 0 Then
+                isFound = True
+                Console.WriteLine("Member roll no. :" & mID)
+                Console.WriteLine("Member name :" & mName)
+
+            End If
+        End While
+        FileClose(1)
+        If isFound = False Then Console.WriteLine("Record not found..")
